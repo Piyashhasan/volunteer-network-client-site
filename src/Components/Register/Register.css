@@ -1,0 +1,15 @@
+.registration-area{
+    width:40%;
+    height: auto;
+    border: 1px solid gray;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    padding:40px 40px;
+}
+.heading{
+    margin-top:-10px;
+    margin-bottom: 25px;
+}
+.button{
+    width:100%;
+}

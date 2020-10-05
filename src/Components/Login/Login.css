@@ -1,0 +1,24 @@
+.login-area{
+    width:40%;
+    height: 350px;
+    border: 1px solid gray;
+    margin-top: 25px;
+    padding:80px 40px;
+}
+.Login img{
+    width:20px;
+    height: 20px;
+    float: left;
+}
+.Login button{
+    width:100%;
+}
+.Button{
+    border:1px solid gray;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+.Login p{
+    margin-top: 10px;
+}
