@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Items from '../Items/Items';
+import Register from '../Register/Register';
 import './Home.css';
-import volunteerWork from '../../fakeData/volunteerWorkData'
-
 
 const Home = () => {
+    const [volunteerWork, setVolunteerWork] = useState([]);
+    console.log(volunteerWork);
+    useEffect(() => {
+        fetch('http://localhost:5000/workDetails')
+        .then(res => res.json())
+        .then(data => setVolunteerWork(data))
+    },[])
     return (
         <div className="container Home">
             <h3 className="heading text-center mb-5">I GROW BY HELPING PEOPLE IN NEED</h3>
@@ -16,13 +22,11 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
-            
-                <div className="row container">
-                    {
-                        volunteerWork.map(work => <Items work={work}></Items>)
-                    }
-                </div>
+            <div className="row container">
+                {
+                    volunteerWork.map(work => <Items work={work}></Items>)
+                }
+            </div>
             
         </div>
     );

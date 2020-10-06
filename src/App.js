@@ -5,6 +5,7 @@ import Home from './Components/Home/Home';
 import NavBar from './Components/NavBar/NavBar';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
+import RegistrationInfo from './Components/RegistrationInfo/RegistrationInfo';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import {
   BrowserRouter as Router,
@@ -12,6 +13,7 @@ import {
   Route,
   Link, Redirect
 } from "react-router-dom";
+
 
 export const UserContext = createContext();
 
@@ -31,6 +33,9 @@ function App() {
               <PrivateRoute path="/work/:id">
                 <Register />
               </PrivateRoute>
+              <Route path="/regInfo">
+                <RegistrationInfo/>
+              </Route>
               <Route exact path="/">
                 <Home />
               </Route>
