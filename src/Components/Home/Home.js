@@ -7,7 +7,7 @@ const Home = () => {
     const [volunteerWork, setVolunteerWork] = useState([]);
     console.log(volunteerWork);
     useEffect(() => {
-        fetch('http://localhost:5000/workDetails')
+        fetch('https://pacific-tundra-19394.herokuapp.com/workDetails')
         .then(res => res.json())
         .then(data => setVolunteerWork(data))
     },[])

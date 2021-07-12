@@ -4,7 +4,7 @@ import './Reginfo.css'
 const RegistrationInfo = () => {
     const [regInfo, setRegInfo] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/registerInfo')
+        fetch('https://pacific-tundra-19394.herokuapp.com/registerInfo')
         .then(res => res.json())
         .then(data => setRegInfo(data))
     }, [])

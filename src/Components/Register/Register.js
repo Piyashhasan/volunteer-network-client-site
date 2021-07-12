@@ -19,7 +19,7 @@ const Register = () => {
     const handelRegistrationInfo = (e) => {
         e.preventDefault()
         const data={...loggedInUser, ...event}
-        fetch('http://localhost:5000/addRegistrationInfo',{
+        fetch('https://pacific-tundra-19394.herokuapp.com/addRegistrationInfo',{
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json'
@@ -31,7 +31,6 @@ const Register = () => {
             console.log(data);
             history.push(from)
         } )
-
     }
     return (
         <div className="Register container">
